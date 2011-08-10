@@ -35,6 +35,38 @@
   </xsl:copy>
 </xsl:template>
 
+<xsl:template match="html:body">
+  <xsl:copy>
+    <xsl:copy-of select="@*"/>
+    <xsl:apply-templates/>
+    <div class="foil" id="toc">
+      <div class="page">
+        <div class="header">
+          <h1>Table of contents</h1>
+        </div>
+        <div class="body">
+          <ul>
+            <xsl:for-each select="html:div[contains(@class, 'foil')
+                                           and not(contains(@class, 'titlefoil'))]">
+              <xsl:variable name="sno"
+                            select="count(preceding::html:div[contains(@class, 'foil')
+                                          and not(contains(@class, 'titlefoil'))]) + 1"/>
+              <li>
+                <span onclick="javascript:goto({$sno})">
+                  <xsl:value-of select="(.//html:h1)[1]"/>
+                </span>
+              </li>
+            </xsl:for-each>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <xsl:sequence select="($license, $footer-text)"/>
+      </div>
+    </div>
+  </xsl:copy>
+</xsl:template>
+
 <xsl:template match="html:body/html:div[contains(@class, 'titlefoil')]" priority="300">
   <xsl:copy>
     <xsl:copy-of select="@*"/>
