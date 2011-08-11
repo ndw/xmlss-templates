@@ -162,20 +162,21 @@ pre {
     padding: 10px;
 }
 
-pre.xml {
+.xml {
     background-color: #E6E6E6;
 }
 
-pre.xslt {
+.xslt {
     background-color: #FFFDCE;
 }
 
-pre.schema {
+.schema {
     background-color: #E5E7FE;
 }
 
-pre.other {
+.other {
     background-color: #C7FFFF;
+    color: #9E0000;
 }
 
 .xml .pi {
@@ -217,3 +218,11 @@ pre .str {
 pre .re {
     color: #FC7F4C;
 }
+
+pre .func,
+pre .const,
+pre .var,
+pre .param {
+    color: black;
+}
+
