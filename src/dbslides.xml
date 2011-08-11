@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slides xml:lang="en"
+        xmlns="http://docbook.org/ns/docbook"
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+<info>
+  <title>Presentation title</title>
+  <subtitle>Class title</subtitle> <!-- ok, maybe that's a bit of tag abuse, so shoot me -->
+  <author>
+    <personname>
+      <firstname>Wile E.</firstname>
+      <surname>Coyote</surname>
+    </personname>
+    <affiliation>
+      <jobtitle>Chief Roadrunner Catcher</jobtitle>
+      <orgname>Acme Corporation</orgname>
+    </affiliation>
+    <email>wile.e.coyote@acme.example.com</email>
+  </author>
+  <releaseinfo role="version">Version 1.0</releaseinfo>
+  <pubdate>2011-09-01</pubdate>
+  <copyright>
+    <year>2011</year>
+    <holder>Acme Corporation</holder>
+  </copyright>
+</info>
+
+<foil>
+<title>Template Notes</title>
+<itemizedlist>
+<listitem>
+<para>This document demonstrates the DocBook slide deck.</para>
+</listitem>
+<listitem>
+<para>You can generate it from <filename>src/dbslides.xml</filename> with
+<filename>style/dbslides.xpl</filename>. You'll need to configure the XProc processor and
+get a copy of the base DocBook stylesheets.</para>
+</listitem>
+<listitem>
+<para>This presentation is designed to work at a resolution of 1024x768.</para>
+</listitem>
+<listitem>
+<para>There are graphics for a 1280x1024 version, but I haven't crafted the CSS yet.</para>
+</listitem>
+</itemizedlist>
+
+<para>The bits:</para>
+
+<itemizedlist>
+<listitem>
+<para><code>slides.html</code> is this file.</para>
+</listitem>
+<listitem>
+<para><code>css/slides.css</code> controls presentation.</para>
+<itemizedlist>
+  <listitem>
+    <para>Note that the foil/page/header/body/footer nesting is designed to make the footer
+          float to the bottom of the page. Changing the order or nesting of those divs may cause
+          problems.</para>
+  </listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para><code>js/slides.js</code> controls the interactivity.</para>
+</listitem>
+<listitem>
+<para>Suggestions for improvement most welcome.</para>
+</listitem>
+</itemizedlist>
+</foil>
+
+<foil>
+<title>Learning Objectives</title>
+<para>Summary of the class</para>
+<orderedlist>
+<listitem>
+<para>Understand…</para>
+</listitem>
+<listitem>
+<para>Learn…</para>
+</listitem>
+<listitem>
+<para>Review…</para>
+</listitem>
+</orderedlist>
+</foil>
+
+<foil>
+<title>Contents</title>
+
+<para>Lecture</para>
+<orderedlist>
+<listitem>
+<para>&#160;</para>
+</listitem>
+<listitem>
+<para>&#160;</para>
+</listitem>
+<listitem>
+<para>&#160;</para>
+</listitem>
+<listitem>
+<para>&#160;</para>
+</listitem>
+<listitem>
+<para>&#160;</para>
+</listitem>
+<listitem>
+<para>&#160;</para>
+</listitem>
+</orderedlist>
+
+<para>Tutorial Session</para>
+<orderedlist continuation="continues">
+<listitem>
+<para>&#160;</para>
+</listitem>
+<listitem>
+<para>&#160;</para>
+</listitem>
+</orderedlist>
+</foil>
+
+<foil>
+<title>XML Sample Code</title>
+<itemizedlist>
+<listitem>
+<para>Format for XML sample code</para>
+</listitem>
+</itemizedlist>
+
+<xi:include href="example.xml.fmt"/>
+</foil>
+
+<foil>
+<title>Schema Sample Code</title>
+<itemizedlist>
+<listitem>
+<para>Format for schema sample code (of any type)</para>
+</listitem>
+</itemizedlist>
+
+<xi:include href="example.xsd.fmt"/>
+</foil>
+
+<foil>
+<title>XSLT Sample Code</title>
+<itemizedlist>
+<listitem>
+<para>Format for XSLT sample code</para>
+</listitem>
+</itemizedlist>
+
+<xi:include href="example.xsl.fmt"/>
+</foil>
+
+<foil>
+<title>Other Sample Code</title>
+<itemizedlist>
+<listitem>
+<para>Format for other sample code (not XML, Schema or XSLT — e.g. XSL-FO, XQuery, Java</para>
+</listitem>
+</itemizedlist>
+
+<programlisting role="other">function <methodname>AC_AddExtension</methodname>(<parameter>src</parameter>, <parameter>ext</parameter>)
+{
+  <phrase role="kw">if</phrase> (<methodname>src.indexOf</methodname>(<phrase role="str">'?'</phrase>) != <constant>-1</constant>)
+    <phrase role="kw">return</phrase> <methodname>src.replace</methodname>(<phrase role="re">/\?/</phrase>, <varname>ext</varname>+<phrase role="str">'?'</phrase>);
+  <phrase role="kw">else</phrase>
+    <phrase role="kw">return</phrase> <varname>src</varname> + <varname>ext</varname>;
+}</programlisting>
+
+</foil>
+</slides>
