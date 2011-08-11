@@ -27,10 +27,12 @@
   <xsl:copy>
     <xsl:copy-of select="@*"/>
     <xsl:apply-templates/>
-    <link rel="stylesheet" type="text/css" href="css/slides.css"/>
+    <link rel="stylesheet/less" type="text/css" href="css/slides.css"/>
     <script type="text/javascript" language="javascript" src="js/jquery-1.6.2.min.js">
     </script>
     <script type="text/javascript" src="js/slides.js">
+    </script>
+    <script type="text/javascript" src="js/less.js">
     </script>
   </xsl:copy>
 </xsl:template>
