@@ -1,7 +1,4 @@
 /* ============================================================ */
-/* Requires LESS (seehttp://lesscss.org/) */
-
-@yellow: #fffc84;
 
 html {
     font-family: Verdana, Tahoma, Arial, sans-serif;
@@ -38,31 +35,31 @@ body {
 }
 
 .header {
-    background-color: @yellow;
+    background-color: #fffc84;
     height: 125px;
     padding-left: 200px;
     text-align: center;
     background-image: url(../images/xmlss-1024.png);
     background-repeat: no-repeat;
     background-position: 10 20;
+}
 
-    h1 {
-	font-family: Tahoma, Arial, sans-serif;
-	font-weight: normal;
-	font-size: 26pt;
-	padding-top: 40px;
-	margin-top: 0px;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-    }
+.header h1 {
+    font-family: Tahoma, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 26pt;
+    padding-top: 40px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
 
-    h2 {
-	font-family: Tahoma, Arial, sans-serif;
-	font-weight: normal;
-	font-size: 20pt;
-	padding-top: 0px;
-	margin-top: 0px;
-    }
+.header h2 {
+    font-family: Tahoma, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 20pt;
+    padding-top: 0px;
+    margin-top: 0px;
 }
 
 .body {
@@ -71,7 +68,7 @@ body {
 }
 
 .footer {
-    background-color: @yellow;
+    background-color: #fffc84;
     position: relative;
     background-image: url(../images/cc-1024.png);
     background-repeat: no-repeat;
@@ -81,32 +78,31 @@ body {
     bottom: 0px;
     padding-left: 100px;
     clear: both;
-
-    .content {
-	padding-left: 400px;
-	height: 0px;
-    }
-
-    .license {
-	padding-top: 8px;
-	padding-left: 30px;
-	font-size: 10pt;
-	height: 0px;
-    }
-
-    .foilnumber {
-	text-align: right;
-	padding-right: 30px;
-	padding-top: 14px;
-	font-size: 10pt;
-	height: 0px;
-    }
 }
 
 img {
     padding-top: 1em;
 }
 
+.footer .content {
+    padding-left: 400px;
+    height: 0px;
+}
+
+.footer .license {
+    padding-top: 8px;
+    padding-left: 30px;
+    font-size: 10pt;
+    height: 0px;
+}
+
+.footer .foilnumber {
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 14px;
+    font-size: 10pt;
+    height: 0px;
+}
 
 /* ============================================================ */
 
@@ -114,47 +110,47 @@ img {
     background-image: url(../images/radcliff.png);
     background-repeat: no-repeat;
     background-position: 0 120;
+}
 
-    .header {
-	background-color: white;
-	background-image: url(../images/xmlssw-1024.png);
-	background-repeat: no-repeat;
-	background-position: 10 20;
+.titlefoil .header {
+    background-color: white;
+    background-image: url(../images/xmlssw-1024.png);
+    background-repeat: no-repeat;
+    background-position: 10 20;
+}
 
-	h1 {
-	    padding-top: 20px;
-	    text-align: left;
-	}
+.titlefoil .header h1 {
+    padding-top: 20px;
+    text-align: left;
+}
 
-	h2 {
-	    text-align: left;
-	}
-    }
+.titlefoil .header h2 {
+    text-align: left;
+}
 
-    .body {
-	padding-top: 260px;
-	padding-left: 200px;
+.titlefoil .body {
+    padding-top: 260px;
+    padding-left: 200px;
+}
 
-	h1 {
-	    font-family: Verdana, Tahoma, Arial, sans-serif;
-	    font-weight: normal;
-	    font-size: 26pt;
-	    padding-top: 0px;
-	    padding-bottom: 0.5em;
-	    margin-top: 0px;
-	    margin-bottom: 0px;
-	}
+.titlefoil .body h1 {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 26pt;
+    padding-top: 0px;
+    padding-bottom: 0.5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
-	h2 {
-	    font-family: Verdana, Tahoma, Arial, sans-serif;
-	    font-weight: normal;
-	    font-size: 26pt;
-	    padding-top: 0px;
-	    padding-bottom: 0.5em;
-	    margin-top: 0px;
-	    margin-bottom: 0px;
-	}
-    }
+.titlefoil .body h2 {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 26pt;
+    padding-top: 0px;
+    padding-bottom: 0.5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /* ============================================================ */
@@ -164,62 +160,67 @@ pre {
     font-weight: bold;
     border: 1px solid black;
     padding: 10px;
-
-
-    &.xml {
-	background-color: #E6E6E6;
-
-	.pi {
-	    color: #8C35C7;
-	}
-
-	.el {
-	    color: #001A94;
-	}
-
-	.att {
-	    color: #FC7F4C;
-	}
-
-	.attval {
-	    color: #9E2E00;
-	}
-
-	.ent {
-	    color: #979315;
-	}
-
-	&.xslt {
-	    color: #006AC6;
-	}
-    }
-
-    &.xslt {
-	background-color: #FFFDCE;
-    }
-
-    &.schema {
-	background-color: #E5E7FE;
-    }
-
-    &.other {
-	background-color: #C7FFFF;
-    }
-
-    .p {
-	color: #9E0000;
-    }
-
-    .kw {
-	color: #001A94;
-    }
-
-    .str {
-	color: #595837;
-    }
-
-    .re {
-	color: #FC7F4C;
-    }
 }
 
+pre.xml {
+    background-color: #E6E6E6;
+}
+
+pre.xslt {
+    background-color: #FFFDCE;
+}
+
+pre.schema {
+    background-color: #E5E7FE;
+}
+
+pre.other {
+    background-color: #C7FFFF;
+}
+
+.xml .pi {
+    color: #8C35C7;
+}
+
+.xml .el {
+    color: #001A94;
+}
+
+.xml .att {
+    color: #FC7F4C;
+}
+
+.xml .attval {
+    color: #9E2E00;
+}
+
+.xml .ent {
+    color: #979315;
+}
+
+.xml .xslt {
+    color: #006AC6;
+}
+
+pre .p {
+    color: #9E0000;
+}
+
+pre .kw {
+    color: #001A94;
+}
+
+pre .str {
+    color: #595837;
+}
+
+pre .re {
+    color: #FC7F4C;
+}
+
+pre .func,
+pre .const,
+pre .var,
+pre .param {
+    color: black;
+}

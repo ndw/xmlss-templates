@@ -10,3 +10,12 @@ School "look and feel" as a S5 theme.
 S5 itself is explicitly released into the Public Domain.  See
 http://meyerweb.com/eric/tools/s5/faq.html
 
+## HTML support
+
+For authoring in HTML, see `src/slides.xml`
+
+## DocBook support
+
+For authoring in DocBook, see `src/dbslides.xml`
+
+You'll probably also have to ask Norm some questions.
