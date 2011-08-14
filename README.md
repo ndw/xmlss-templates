@@ -9,5 +9,7 @@ School "look and feel" as a S5 theme.
 
 See 's5slides.html' for sample.
 
+Run 'style/s5slides.xsl' on 'src/slides.xml' to remake 's5slides.html'.
+
 S5 itself is explicitly released into the Public Domain.  See
 http://meyerweb.com/eric/tools/s5/faq.html
