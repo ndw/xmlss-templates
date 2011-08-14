@@ -7,5 +7,7 @@
 This project contains a skeletal project that provides the XML Summer
 School "look and feel" as a S5 theme.
 
+See 's5slides.html' for sample.
+
 S5 itself is explicitly released into the Public Domain.  See
 http://meyerweb.com/eric/tools/s5/faq.html
