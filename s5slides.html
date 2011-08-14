@@ -1,6 +1,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Presentation title</title>
+      <meta name="version" content="S5 1.1" />
+      <meta name="author" content="Tony Graham" />
+      <meta name="defaultView" content="slideshow" />
+      <meta name="controlVis" content="hidden" />
         <link rel="stylesheet" href="ui/xmlss/slides.css" type="text/css" media="projection"
             id="slideProj" />
       <link rel="stylesheet" href="ui/xmlss/outline.css" type="text/css" media="screen"
@@ -19,7 +23,7 @@
          </div>
       </div>
       <div class="presentation">
-<div class="slide titlefoil"><h1>Presentation title</h1><h2>Xx September 2011</h2></div><div class="slidecontent"><h1>Class title</h1><h2>Wile E. Coyote</h2><h2>Acme Corporation</h2></div><div class="slide"><h1>Template Notes</h1><div class="slidecontent"><ul>
+<div class="slide"><h1>Presentation title</h1><h2>Xx September 2011</h2><h1>Class title</h1><h2>Wile E. Coyote</h2><h2>Acme Corporation</h2></div><div class="slide"><h1>Template Notes</h1><div class="slidecontent"><ul>
         <li>This document demonstrates the slide deck.</li>
         <li>You could write it by hand.</li>
         <li>But I generate it from <code>src/slides.xml</code> with <code>style/slides.xsl</code>.</li>
@@ -36,11 +40,11 @@
         </li>
         <li><code>js/slides.js</code> controls the interactivity.</li>
         <li>Suggestions for improvement most welcome.</li>
-      </ul></div></div><div class="slide"><div class="page"><div class="header"><h1>Learning Objectives</h1></div><div class="slidecontent"><p>Summary of the class</p><ol>
+      </ul></div></div><div class="slide"><h1>Learning Objectives</h1><div class="slidecontent"><p>Summary of the class</p><ol>
         <li>Understand…</li>
         <li>Learn…</li>
         <li>Review…</li>
-      </ol></div></div></div><div class="slide"><div class="page"><div class="header"><h1>Contents</h1></div><div class="slidecontent"><p>Lecture</p><ol>
+      </ol></div></div><div class="slide"><h1>Contents</h1><div class="slidecontent"><p>Lecture</p><ol>
         <li> </li>
         <li> </li>
         <li> </li>
@@ -50,7 +54,7 @@
       </ol><p>Tutorial Session</p><ol start="7">
         <li> </li>
         <li> </li>
-      </ol></div></div></div><div class="slide"><h1>XML Sample Code</h1><div class="slidecontent"><ul>
+      </ol></div></div><div class="slide"><h1>XML Sample Code</h1><div class="slidecontent"><ul>
         <li>Format for XML sample code</li>
       </ul><pre class="xml">
 <span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
@@ -58,13 +62,13 @@
   <span class="el">&lt;element <span class="att">attribute=</span><span class="attval">"value"</span>&gt;</span>
     Content and an entity <span class="ent">&amp;gt;</span> - greater than.
   <span class="el">&lt;/element&gt;</span>
-<span class="el">&lt;/document&gt;</span></pre></div></div><div class="slide"><div class="page"><div class="header"><h1>Schema Sample Code</h1></div><div class="slidecontent"><ul>
+<span class="el">&lt;/document&gt;</span></pre></div></div><div class="slide"><h1>Schema Sample Code</h1><div class="slidecontent"><ul>
         <li>Format for schema sample code (of any type)</li>
       </ul><pre class="xml schema">
 <span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="el">&lt;xs:schema <span class="att">xmlns:xs=</span><span class="attval">"http://www.w3.org/2001/XMLSchema"</span>&gt;</span>
   <span class="el">&lt;xs:element <span class="att">name=</span><span class="attval">"element"</span> <span class="att">type=</span><span class="attval">"xs:string"</span>/&gt;</span>
-<span class="el">&lt;/xs:schema&gt;</span></pre></div></div></div><div class="slide"><div class="page"><div class="header"><h1>XSLT Sample Code</h1></div><div class="slidecontent"><ul>
+<span class="el">&lt;/xs:schema&gt;</span></pre></div></div><div class="slide"><h1>XSLT Sample Code</h1><div class="slidecontent"><ul>
         <li>Format for XSLT sample code</li>
       </ul><pre class="xml xslt">
 <span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
@@ -76,7 +80,7 @@
         <span class="xslt">&lt;xsl:apply-templates/&gt;</span>
     <span class="xslt">&lt;/xsl:template&gt;</span>
 <span class="el">&lt;/html&gt;</span>
-<span class="xslt">&lt;/xsl:stylesheet&gt;</span></pre></div></div></div><div class="slide"><div class="page"><div class="header"><h1>Other Sample Code</h1></div><div class="slidecontent"><ul>
+<span class="xslt">&lt;/xsl:stylesheet&gt;</span></pre></div></div></div><div class="slide"><h1>Other Sample Code</h1><div class="slidecontent"><ul>
         <li>Format for other sample code (not XML, Schema or XSLT — e.g. XSL-FO, XQuery, Java</li>
       </ul><pre class="other">
 <span class="p">function</span> AC_AddExtension<span class="p">(</span>src<span class="p">,</span> ext<span class="p">)</span>
@@ -85,5 +89,5 @@
     <span class="kw">return</span> src.replace<span class="p">(</span><span class="re">/\?/</span><span class="p">,</span> ext<span class="p">+</span><span class="str">'?'</span><span class="p">);</span>
   <span class="kw">else</span>
     <span class="kw">return</span> src <span class="p">+</span> ext<span class="p">;</span>
-<span class="p">}</span></pre></div></div></div><div class="slide" id="toc"><div class="page"><div class="header"><h1>Table of contents</h1></div><div class="slidecontent"><ul><li><span onclick="javascript:goto(1)">Template Notes</span></li><li><span onclick="javascript:goto(2)">Learning Objectives</span></li><li><span onclick="javascript:goto(3)">Contents</span></li><li><span onclick="javascript:goto(4)">XML Sample Code</span></li><li><span onclick="javascript:goto(5)">Schema Sample Code</span></li><li><span onclick="javascript:goto(6)">XSLT Sample Code</span></li><li><span onclick="javascript:goto(7)">Other Sample Code</span></li></ul></div></div></div></div></body>
+<span class="p">}</span></pre></div></div><div class="slide" id="toc"><h1>Table of contents</h1><div class="slidecontent"><ul><li><span onclick="javascript:goto(1)">Template Notes</span></li><li><span onclick="javascript:goto(2)">Learning Objectives</span></li><li><span onclick="javascript:goto(3)">Contents</span></li><li><span onclick="javascript:goto(4)">XML Sample Code</span></li><li><span onclick="javascript:goto(5)">Schema Sample Code</span></li><li><span onclick="javascript:goto(6)">XSLT Sample Code</span></li><li><span onclick="javascript:goto(7)">Other Sample Code</span></li></ul></div></div></body>
 </html>
