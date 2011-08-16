@@ -115,6 +115,7 @@ div#footer {
     padding-left: 100px;
     clear: both;
     height: auto;
+    z-index: 25;  /* Has to be higher than #slide0 to show. */
 }
 
 div#footer .content {
