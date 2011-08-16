@@ -40,7 +40,7 @@ $(document).ready(function(){
         curSlide = hashSlide + titleSlides
     }
 
-    $($(".foil")[curSlide - 1]).css("display", "block")
+    goto(curSlide)
 });
 
 $(document).keydown(navigate);
@@ -50,33 +50,89 @@ function navigate(event) {
     //console.log("code: " + code)
     //console.log(curSlide + " of " + totSlides)
 
-    if ((code == ARR_R || code == KEY_n || code == KEY_space) && curSlide < totSlides) {
-        goto(curSlide+1)
+    if (code == KEY_space) {
+        reveal_next();
+    }
+
+    if ((code == ARR_R || code == KEY_n) && curSlide < totSlides) {
+        goto(curSlide+1);
     }
 
     if ((code == ARR_L || code == KEY_p) && curSlide > 1) {
-        goto(curSlide-1)
+        goto(curSlide-1);
     }
 
     if (code == KEY_h) {
-        goto(1)
+        goto(1);
     }
 
     if (code == KEY_t) {
-        goto(totSlides)
+        goto(totSlides);
     }
 
     return true;
 }
 
+function reveal_next() {
+    var slide = $($(".foil")[curSlide - 1]);
+    var reveal = slide.find(".reveal")
+    var revealed = false
+
+    if (reveal.size() > 0) {
+        reveal.each(function(index){
+            $(this).find("li").each(function(linum){
+                if (!revealed && $(this).hasClass("hideli")) {
+                    revealed = true;
+                    $(this).fadeIn("slow")
+                    $(this).removeClass("hideli")
+                    $(this).addClass("showli")
+                }
+            });
+        });
+    }
+
+    if (!revealed) {
+        goto(curSlide+1);
+    }
+}
+
 function goto(slide) {
-    $($(".foil")[curSlide - 1]).css("display","none")
+    var oldslide = $($(".foil")[curSlide - 1]);
+    var newslide = $($(".foil")[slide - 1]);
+
+    var revealAll = (curSlide > slide);
+
+    var reveal = newslide.find(".reveal")
+    if (reveal.size() > 0) {
+        reveal.each(function(index){
+            $(this).find("li").each(function(linum){
+                if (revealAll || linum == 0) {
+                    if (revealAll) {
+                        $(this).css("display", "list-item")
+                    } else {
+                        $(this).css("display", "none")
+                        $(this).fadeIn("slow")
+                    }
+                    $(this).removeClass("hideli")
+                    $(this).addClass("showli")
+                } else {
+                    $(this).css("display", "none")
+                    $(this).removeClass("showli")
+                    $(this).addClass("hideli")
+                }
+            });
+        });
+    }
+
+    oldslide.css("display","none")
+    newslide.css("display","block")
+
     curSlide = slide
-    $($(".foil")[curSlide - 1]).css("display","block")
 
     var hash = ""
     if (curSlide > titleSlides) {
         hash = "#" + (curSlide - titleSlides)
     }
+
     window.location.hash = hash
 }

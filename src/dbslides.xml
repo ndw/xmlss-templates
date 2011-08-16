@@ -27,26 +27,31 @@
 
 <foil>
 <title>Template Notes</title>
-<itemizedlist>
+<itemizedlist spacing="compact">
 <listitem>
-<para>This document demonstrates the DocBook slide deck.</para>
+<simpara>This document demonstrates the DocBook slide deck.</simpara>
+<itemizedlist spacing="compact">
+<listitem>
+<simpara>And this list demonstrats “compact” spacing vs. normal spacing elsewhere.</simpara>
+</listitem>
+</itemizedlist>
 </listitem>
 <listitem>
-<para>You can generate it from <filename>src/dbslides.xml</filename> with
+<simpara>You can generate it from <filename>src/dbslides.xml</filename> with
 <filename>style/dbslides.xpl</filename>. You'll need to configure the XProc processor and
-get a copy of the base DocBook stylesheets.</para>
+get a copy of the base DocBook stylesheets.</simpara>
 </listitem>
 <listitem>
-<para>This presentation is designed to work at a resolution of 1024x768.</para>
+<simpara>This presentation is designed to work at a resolution of 1024x768.</simpara>
 </listitem>
 <listitem>
-<para>There are graphics for a 1280x1024 version, but I haven't crafted the CSS yet.</para>
+<simpara>There are graphics for a 1280x1024 version, but I haven't crafted the CSS yet.</simpara>
 </listitem>
 </itemizedlist>
 
 <para>The bits:</para>
 
-<itemizedlist>
+<itemizedlist role="reveal">
 <listitem>
 <para><code>slides.html</code> is this file.</para>
 </listitem>

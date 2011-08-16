@@ -179,6 +179,14 @@ pre {
     color: #9E0000;
 }
 
+.hideli {
+    display: none;
+}
+
+.showli {
+    display: list-item;
+}
+
 .xml .pi {
     color: #8C35C7;
 }

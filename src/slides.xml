@@ -42,7 +42,7 @@
     <div class="foil">
       <h1>Learning Objectives</h1>
       <p>Summary of the class</p>
-      <ol>
+      <ol class="reveal">
         <li>Understand…</li>
         <li>Learn…</li>
         <li>Review…</li>
