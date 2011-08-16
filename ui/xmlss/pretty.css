@@ -105,17 +105,17 @@ div#header {
     text-align: center;
     background-image: url(xmlss-1024.png);
     background-repeat: no-repeat;
-    background-position: 10 20;
+    background-position: 10px 20px;
 }
 div#footer {
     background-color: #fffc84;
     background-image: url(cc-1024.png);
     background-repeat: no-repeat;
-    background-position: 3 3;
+    background-position: 3px 3px;
     padding-left: 100px;
     clear: both;
     height: auto;
-    z-index: 25;  /* Has to be higher than #slide0 to show. */
+    z-index: 5;  /* Has to be higher than #slide0 to show. */
 }
 
 div#footer .content {
@@ -171,7 +171,6 @@ div#controls form {position: absolute; bottom: 0; right: 0; width: 100%;
 #currentSlide {
     text-align: right;
     font-size: 0.5em;
-    z-index: 4;
     left: 85%;
 }
 
@@ -179,8 +178,8 @@ div#controls form {position: absolute; bottom: 0; right: 0; width: 100%;
 	 padding-top: 3.5em;
 	 margin-right: 15%;
 	 font-size: 90%;
-	z-index: 20;
-	background-color: #FFF}
+	 z-index: 2;
+	 background-color: #FFF}
 #slide0 h1 {position: static; margin: 1em 0 0; padding: 0;
  white-space: normal;
    color: #000; background: transparent;}
@@ -193,8 +192,8 @@ div#controls form {position: absolute; bottom: 0; right: 0; width: 100%;
 #slide0 {
     background-image: url(radcliff.png);
     background-repeat: no-repeat;
-    background-position: 0 center;
-
+    background-position: 0px center;
+}
 
 
 ul.urls {list-style: none; display: inline; margin: 0;}
@@ -208,6 +207,7 @@ html>body .external {border-bottom: none;}
 img.incremental {visibility: hidden;}
 .slide .current {color: #B02;}
 
+.tablesmall {font-size: 0.8em !important;}
 table {border: none}
 thead {border-top: solid #002B5C}
 th { color: whitesmoke }
