@@ -13,6 +13,7 @@ var ARR_U = 38;
 var ARR_D = 40;
 var KEY_F1 = 112;
 var KEY_ESC = 27;
+var KEY_a = 65;
 var KEY_h = 72;
 var KEY_t = 84;
 var KEY_space = 32;
@@ -68,6 +69,10 @@ function navigate(event) {
 
     if (code == KEY_t) {
         goto(totSlides);
+    }
+
+    if (code == KEY_a) {
+        show_all();
     }
 
     return true;
@@ -135,4 +140,18 @@ function goto(slide) {
     }
 
     window.location.hash = hash
+}
+
+function show_all(slide) {
+    $(".foil").each(function(snum) {
+        $(this).css("display", "block");
+        var reveal = $(this).find(".reveal")
+        if (reveal.size() > 0) {
+            reveal.each(function(index){
+                $(this).find("li").each(function(linum){
+                    $(this).css("display", "list-item")
+                });
+            });
+        };
+    });
 }

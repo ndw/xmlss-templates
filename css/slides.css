@@ -234,3 +234,25 @@ pre .param {
     color: black;
 }
 
+/* ============================================================ */
+
+@media print
+{
+    .newpage {
+        page-break-before: always;
+    }
+
+    .hideli {
+        display: list-item;
+    }
+
+    .foil {
+        border: 0;
+        margin: 0 5%;
+        padding: 0;
+    }
+
+    .footer .foilnumber {
+        display: none;
+    }
+}
