@@ -150,6 +150,9 @@ div.long {font-size: 0.75em;}
     margin-bottom: 0px;
 }
 .slide h3 {font-size: 130%;}
+
+.slidecontent {margin-top: 30pt;}
+
 h1 abbr {font-variant: small-caps;}
 
 #controls :active {color: #88A !important;}
@@ -192,7 +195,7 @@ div#controls form {position: absolute; bottom: 0; right: 0; width: 100%;
 #slide0 {
     background-image: url(radcliff.png);
     background-repeat: no-repeat;
-    background-position: 0px center;
+    background-position: center center;
 }
 
 
