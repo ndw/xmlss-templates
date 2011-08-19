@@ -132,22 +132,15 @@ div#footer .license {
 #footer h2 {font-style: italic;}
 
 div.long {font-size: 0.75em;}
-.slide h1 {position: absolute;
-	   top: 0.7em;
-	   left: 40%;
-	   right: 40%;
-	   z-index: 1;
-  white-space: nowrap;
-    text-align: center;
-}
 .slide h1 {
     font-family: Tahoma, Arial, sans-serif;
     font-weight: normal;
     font-size: 26pt;
-    padding-top: 40px;
-    margin-top: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    z-index: 1;
+    text-align: center;
 }
 .slide h3 {font-size: 130%;}
 
