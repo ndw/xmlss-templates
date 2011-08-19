@@ -106,9 +106,7 @@ function currentSlide() {
 	} else {
 		cs = document.currentSlide;
 	}
-	cs.innerHTML = '<span id="csHere">' + snum + '<\/span> ' + 
-		'<span id="csSep">\/<\/span> ' + 
-		'<span id="csTotal">' + (smax-1) + '<\/span>';
+	cs.innerHTML = 'Slide <span id="csHere">' + snum + '<\/span> ';
 	if (snum == 0) {
 		cs.style.visibility = 'hidden';
 	} else {
@@ -435,7 +433,7 @@ function fontSize(value) {
 	}
 	if (!isIE) {
 		while (s5ss.lastChild) s5ss.removeChild(s5ss.lastChild);
-		s5ss.appendChild(document.createTextNode('body {font-size: ' + value + ' !important;}'));
+		s5ss.appendChild(document.createTextNode('body {font-size: 20pt !important;}'));
 	} else {
 		document.s5ss.addRule('body','font-size: ' + value + ' !important;');
 	}
