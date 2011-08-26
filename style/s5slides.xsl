@@ -62,6 +62,30 @@
   </xsl:copy>
 </xsl:template>
 
+<xsl:template match="html:body/html:div[contains(@class, 'titlefoil')]" priority="200">
+  <xsl:copy>
+    <xsl:copy-of select="@*"/>
+    <xsl:attribute name="class" select="'slide'" />
+    <div class="top">
+      <xsl:copy-of select="html:div[@class eq 'header']/*" />
+    </div>
+    <h2 class="subtitle">
+      <xsl:apply-templates
+	  select="html:div[@class eq 'body']/html:h1/node()" />
+    </h2>
+    <div class="author">
+      <div class="name">
+      <xsl:apply-templates
+	  select="html:div[@class eq 'body']/html:h2[1]/node()" />
+    </div>
+      <div class="affiliation">
+      <xsl:apply-templates
+	  select="html:div[@class eq 'body']/html:h2[2]/node()" />
+    </div>
+    </div>
+  </xsl:copy>
+</xsl:template>
+
 <xsl:template match="html:body/html:div" priority="100">
   <xsl:copy>
     <xsl:copy-of select="@*"/>
