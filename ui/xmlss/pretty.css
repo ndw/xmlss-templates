@@ -12,7 +12,7 @@ html {
 body {background: #FFF ; color: #000; font-size: 2em; line-height: 1.15}
 :link, :visited {text-decoration: none; color: #00C;}
 h1, h2, h3, h4 {font-size: 100%; margin: 0; padding: 0; font-weight: inherit;}
-ul, pre {margin: 0; line-height: 1em;}
+pre {margin: 0; line-height: 1em;}
 
 blockquote, q {font-style: italic;}
 blockquote {padding: 0 2em 0.5em; margin: 0 1.5em 0.5em; text-align: center; font-size: 1em;}
@@ -91,10 +91,18 @@ pre .re {
 }
  
 .slide pre code {display: block;}
+ul {margin: 0}
 .slide ul {margin-left: 5%; margin-right: 7%; list-style: disc;}
 .slide li {margin-top: 0.4em; margin-right: 0;}
-.slide ul ul li {margin: .2em; list-style: square;}
+.slide ul ul li {margin: 0.4em; list-style: square;}
 .slide img.leader {display: block; margin: 0 auto;}
+
+table.listholder {
+    margin-top: -0.4em; /* Counteracts 'margin-top' of top li. */
+    border-style: none;
+    margin-left: 2.5%;  /* Adds to 50% reduced margin of left list. */
+    width: 100%
+}
 
 /* background: #002B5C; */
 div#header {
@@ -137,8 +145,8 @@ div.long {font-size: 0.75em;}
     font-size: 26pt;
     position: absolute;
     top: 40px;
-    left: 0px;
-    width: 100%;
+    left: 125px;
+    right: 0px;
     z-index: 1;
     text-align: center;
 }
@@ -170,26 +178,54 @@ div#controls form {position: absolute; bottom: 0; right: 0; width: 100%;
     left: 85%;
 }
 
-#slide0 {height: 700px;
-	 padding-top: 3.5em;
-	 margin-right: 15%;
-	 font-size: 90%;
-	 z-index: 2;
-	 background-color: #FFF}
-#slide0 h1 {position: static; margin: 1em 0 0; padding: 0;
- white-space: normal;
-   color: #000; background: transparent;}
-#slide0 h3 {margin-top: 1.5em; font-size: 1.5em;}
-#slide0 h4 {margin-top: 0; font-size: 1em;}
-#slide0 .author {margin-top: 2em;}
-
-#slide0 div#header {display: none; background-color: #FFF;}
-
 #slide0 {
+    padding-top: 400px;
+    padding-left: 0;
+    z-index: 2;
+    background-color: #FFF;
+    width: 100%;
     background-image: url(radcliff.png);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 0 150px;
 }
+
+#slide0 .top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 97px;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 200px;
+    white-space: normal;
+    color: #000;
+    background: transparent;
+    background-image: url(xmlssw-1024.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+#slide0 .top h1 {
+    text-align: left;
+    position: static;
+}
+
+#slide0 .top .date {
+    font-size: 20pt;
+}
+
+#slide0 .name,
+#slide0 .subtitle {
+    font-size: 26pt;
+    margin-top: 1em;
+    padding-left: 200px;
+}
+#slide0 .affiliation {
+    padding-left: 200px;
+    font-size: 24pt;
+}
+
+#slide0 div#header {display: none; background-color: #FFF;}
 
 
 ul.urls {list-style: none; display: inline; margin: 0;}
