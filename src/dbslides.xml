@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?dbhtml pygments="true"?>
 <slides xml:lang="en"
         xmlns="http://docbook.org/ns/docbook"
         xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -134,7 +134,7 @@ get a copy of the base DocBook stylesheets.</simpara>
 </listitem>
 </itemizedlist>
 
-<xi:include href="example.xml.fmt"/>
+<programlisting language="xml"><xi:include href="example.xml" parse="text"/></programlisting>
 </foil>
 
 <foil>
@@ -145,7 +145,7 @@ get a copy of the base DocBook stylesheets.</simpara>
 </listitem>
 </itemizedlist>
 
-<xi:include href="example.xsd.fmt"/>
+<programlisting language="xml" role="xsd"><xi:include href="example.xsd" parse="text"/></programlisting>
 </foil>
 
 <foil>
@@ -156,7 +156,7 @@ get a copy of the base DocBook stylesheets.</simpara>
 </listitem>
 </itemizedlist>
 
-<xi:include href="example.xsl.fmt"/>
+<programlisting language="xml" role="xsl"><xi:include href="example.xsl" parse="text"/></programlisting>
 </foil>
 
 <foil>

@@ -10,7 +10,7 @@
 		exclude-result-prefixes="db f h m t xs"
                 version="2.0">
 
-<xsl:import href="/projects/docbook/xslt20/stylesheets/base/html/docbook.xsl"/>
+<xsl:import href="docbook/base/html/docbook.xsl"/>
 
 <xsl:param name="linenumbering" as="element()*">
   <ln path="programlisting" everyNth="0" width="0" separator=" " padchar=" " minlines="-1"/>

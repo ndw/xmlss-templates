@@ -1,5 +1,7 @@
 /* ============================================================ */
 
+@import url("pygments.css");
+
 html {
     font-family: Verdana, Tahoma, Arial, sans-serif;
     font-weight: normal;
