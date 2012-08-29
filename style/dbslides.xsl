@@ -94,9 +94,28 @@
     </div>
     <div class="body">
       <h1><xsl:apply-templates select="db:subtitle/node()"/></h1>
-      <h2><xsl:apply-templates select="db:author/db:personname"/></h2>
-      <h2><xsl:apply-templates select="db:author/db:affiliation/db:orgname"/></h2>
+      <xsl:apply-templates select="db:authorgroup|db:author"/>
+      <xsl:apply-templates select="db:legalnotice"/>
     </div>
+  </div>
+</xsl:template>
+
+<xsl:template match="db:authorgroup">
+  <div class="authorgroup">
+    <xsl:apply-templates/>
+  </div>
+</xsl:template>
+
+<xsl:template match="db:author">
+  <h2><xsl:apply-templates select="db:personname"/></h2>
+  <xsl:if test="db:affiliation/db:orgname">
+    <h3><xsl:apply-templates select="db:affiliation/db:orgname"/></h3>
+  </xsl:if>
+</xsl:template>
+
+<xsl:template match="db:legalnotice">
+  <div class="legalnotice">
+    <xsl:apply-templates/>
   </div>
 </xsl:template>
 

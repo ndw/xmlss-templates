@@ -151,6 +151,16 @@ img {
     font-size: 26pt;
     padding-top: 0px;
     padding-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0px;
+}
+
+.titlefoil .body h3 {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 18pt;
+    padding-top: 0px;
+    padding-bottom: 0.5em;
     margin-top: 0px;
     margin-bottom: 0px;
 }

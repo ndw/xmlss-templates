@@ -6,18 +6,31 @@
 <info>
   <title>Presentation title</title>
   <subtitle>Class title</subtitle> <!-- ok, maybe that's a bit of tag abuse, so shoot me -->
-  <author>
-    <personname>
-      <firstname>Wile E.</firstname>
-      <surname>Coyote</surname>
-    </personname>
-    <affiliation>
-      <jobtitle>Chief Roadrunner Catcher</jobtitle>
-      <orgname>Acme Corporation</orgname>
-    </affiliation>
-    <email>wile.e.coyote@acme.example.com</email>
-  </author>
+  <authorgroup>
+    <author>
+      <personname>
+        <firstname>Wile E.</firstname>
+        <surname>Coyote</surname>
+      </personname>
+      <affiliation>
+        <jobtitle>Chief Roadrunner Catcher</jobtitle>
+        <orgname>Acme Corporation</orgname>
+      </affiliation>
+      <email>wile.e.coyote@acme.example.com</email>
+    </author>
+    <author>
+      <personname>
+        <firstname>Road</firstname>
+        <surname>Runner</surname>
+      </personname>
+      <affiliation>
+        <jobtitle>Escape Artist</jobtitle>
+      </affiliation>
+      <email>road.runner@alwaysgetsaway.example.com</email>
+    </author>
+  </authorgroup>
   <releaseinfo role="version">Version 1.0</releaseinfo>
+  <legalnotice><para>Alpha by last name</para></legalnotice>
   <pubdate>2011-09-01</pubdate>
   <copyright>
     <year>2011</year>
@@ -174,6 +187,19 @@ get a copy of the base DocBook stylesheets.</simpara>
   <phrase role="kw">else</phrase>
     <phrase role="kw">return</phrase> <varname>src</varname> + <varname>ext</varname>;
 }</programlisting>
-
 </foil>
+
+<foil>
+<title>An Image</title>
+
+<para>There's a fair bit of markup needed for images.</para>
+
+<mediaobject>
+<alt>The Radcliff Camera</alt>
+<imageobject>
+<imagedata fileref="../images/radcliff.png" />
+</imageobject>
+</mediaobject>
+</foil>
+
 </slides>
