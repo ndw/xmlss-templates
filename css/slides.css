@@ -22,6 +22,12 @@ body {
     padding: 0;
 }
 
+table tr td,
+table tr th {
+    font-size: 20pt;
+}
+
+
 .foil {
     height: 100%;
 }
@@ -244,6 +250,17 @@ pre .const,
 pre .var,
 pre .param {
     color: black;
+}
+
+/* ============================================================ */
+
+.authorgroup {
+    display: table;
+    border-spacing: 1em;
+}
+
+.authorgroup .author {
+    display: table-cell;
 }
 
 /* ============================================================ */

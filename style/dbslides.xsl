@@ -107,16 +107,22 @@
 </xsl:template>
 
 <xsl:template match="db:author">
-  <h2><xsl:apply-templates select="db:personname"/></h2>
-  <xsl:if test="db:affiliation/db:orgname">
-    <h3><xsl:apply-templates select="db:affiliation/db:orgname"/></h3>
-  </xsl:if>
+  <div class="author">
+    <h2><xsl:apply-templates select="db:personname"/></h2>
+    <xsl:if test="db:affiliation/db:orgname">
+      <h3><xsl:apply-templates select="db:affiliation/db:orgname"/></h3>
+    </xsl:if>
+  </div>
 </xsl:template>
 
 <xsl:template match="db:legalnotice">
   <div class="legalnotice">
     <xsl:apply-templates/>
   </div>
+</xsl:template>
+
+<xsl:template match="db:speakernotes">
+  <!-- ignored -->
 </xsl:template>
 
 <xsl:template match="db:foil">
