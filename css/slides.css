@@ -9,6 +9,7 @@ html {
     padding: 0px;
     margin: 0px;
     height: 100%;
+    width: 1004px;
 }
 
 body {
@@ -26,7 +27,6 @@ table tr td,
 table tr th {
     font-size: 20pt;
 }
-
 
 .foil {
     height: 100%;
@@ -173,6 +173,22 @@ img {
 
 /* ============================================================ */
 
+.foilgroup .header h1 {
+    padding-top: 400px;
+    font-size: 28pt;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.foilgroup .body {
+    margin-top: 400px;
+    padding-top: 0px;
+    overflow: auto;
+    font-size: 20pt;
+}
+
+/* ============================================================ */
+
 pre {
     font-family: Courier New, Courier, monospaced;
     font-weight: bold;
@@ -250,6 +266,35 @@ pre .const,
 pre .var,
 pre .param {
     color: black;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: black;
+}
+
+.gray {
+    color: #BBBBBB;
+}
+
+ul.toc a,
+ul.toc a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* ============================================================ */
+
+.clicknav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.shownav {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 /* ============================================================ */

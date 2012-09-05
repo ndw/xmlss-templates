@@ -10,11 +10,18 @@
 		exclude-result-prefixes="db f h m t xs"
                 version="2.0">
 
-<xsl:import href="docbook/base/html/docbook.xsl"/>
+<xsl:import href="docbook/slides/html/plain.xsl"/>
 
 <xsl:param name="linenumbering" as="element()*">
   <ln path="programlisting" everyNth="0" width="0" separator=" " padchar=" " minlines="-1"/>
 </xsl:param>
+
+<xsl:param name="cdn.jquery"
+           select="'js/jquery-1.6.2.min.js'"/>
+<xsl:param name="cdn.jqueryui"
+           select="'js/jquery-ui-1.8.16.custom.min.js'"/>
+<xsl:param name="cdn.jqueryui.css"
+           select="'css/ui-lightness/jquery-ui-1.8.16.custom.css'"/>
 
 <xsl:variable name="license" as="element()">
   <div class="license">Licensed under a Creative Commons Attribution-
@@ -25,65 +32,50 @@
   <div class="content">www.xmlsummerschool.com</div>
 </xsl:variable>
 
-<xsl:param name="root.elements">
-  <db:slides/>
-</xsl:param>
+<xsl:function name="f:slideno" as="xs:integer">
+  <xsl:param name="foil"/>
 
-<xsl:param name="docbook.css" select="'css/slides.css'"/>
-<xsl:param name="jquery.js" select="'js/jquery-1.6.2.min.js'"/>
-<xsl:param name="slides.js" select="'js/slides.js'"/>
+  <xsl:value-of select="count($foil/preceding::db:foil)
+                        + count($foil/preceding::db:foilgroup)
+                        + count($foil/parent::db:foilgroup)
+                        + 1"/>
+</xsl:function>
 
-<xsl:template match="/">
-  <xsl:apply-templates/>
+<xsl:template name="t:slides.javascript">
+  <script type="text/javascript" language="javascript"
+          src="{$cdn.jquery}"/>
+  <script type="text/javascript" language="javascript"
+          src="{$cdn.jqueryui}"/>
+
+  <script type="text/javascript" language="javascript"
+          src="js/jquery-timers-1.2.js" />
+  <script type="text/javascript" language="javascript"
+          src="js/jquery.ba-hashchange.min.js" />
+  <script type="text/javascript" language="javascript"
+          src="js/slides.js" />
 </xsl:template>
 
-<xsl:template match="db:slides">
-  <html>
-    <head>
-      <!-- assume we're going to serialize as utf-8 -->
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <title>
-        <xsl:value-of select="db:info/db:title"/>
-      </title>
+<xsl:template name="t:slides.css">
+  <link type="text/css" rel="stylesheet"
+        href="{$cdn.jqueryui.css}"/>
+  <link type="text/css" rel="stylesheet"
+        href="css/slides.css"/>
+</xsl:template>
 
-    <link rel="stylesheet" type="text/css" href="{$docbook.css}" />
-    <script type="text/javascript" language="javascript" src="{$jquery.js}" />
-    <script type="text/javascript" language="javascript" src="{$slides.js}" />
-    </head>
-    <body>
-      <div class="foil titlefoil">
-        <xsl:apply-templates select="db:info"/>
-        <div class="footer">
-          <xsl:sequence select="($license, $footer-text)"/>
-        </div>
-      </div>
+<xsl:template name="t:title-footer">
+  <div class="footer">
+    <xsl:sequence select="($license, $footer-text)"/>
+  </div>
+</xsl:template>
 
-      <xsl:apply-templates select="db:foil"/>
-
-      <div class="foil">
-        <div class="page">
-          <div class="header">
-            <h1>Table of contents</h1>
-          </div>
-          <div class="body">
-            <ul>
-              <xsl:for-each select="db:foil">
-                <xsl:variable name="sno" select="count(preceding::db:foil)+2"/>
-                <li>
-                  <span onclick="javascript:goto({$sno})">
-                    <xsl:value-of select="db:title"/>
-                  </span>
-                </li>
-              </xsl:for-each>
-            </ul>
-          </div>
-        </div>
-        <div class="footer">
-          <xsl:sequence select="($license, $footer-text)"/>
-        </div>
-      </div>
-    </body>
-  </html>
+<xsl:template name="t:slide-footer">
+  <div class="footer">
+    <xsl:sequence select="($license, $footer-text)"/>
+    <div class="foilnumber">
+      <xsl:text>Slide </xsl:text>
+      <xsl:value-of select="f:slideno(.)"/>
+    </div>
+  </div>
 </xsl:template>
 
 <xsl:template match="db:slides/db:info">
@@ -124,6 +116,7 @@
 <xsl:template match="db:speakernotes">
   <!-- ignored -->
 </xsl:template>
+
 
 <xsl:template match="db:foil">
   <div class="foil">

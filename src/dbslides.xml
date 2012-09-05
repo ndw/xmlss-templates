@@ -87,6 +87,8 @@ get a copy of the base DocBook stylesheets.</simpara>
 </itemizedlist>
 </foil>
 
+<foilgroup>
+<title>Example foilgroup</title>
 <foil>
 <title>Learning Objectives</title>
 <para>Summary of the class</para>
@@ -200,6 +202,12 @@ get a copy of the base DocBook stylesheets.</simpara>
 <imagedata fileref="../images/radcliff.png" />
 </imageobject>
 </mediaobject>
+</foil>
+</foilgroup>
+
+<foil>
+<title>Closing slide</title>
+<para>Q&amp;A</para>
 </foil>
 
 </slides>
