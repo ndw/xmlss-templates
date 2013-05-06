@@ -1,6 +1,12 @@
-/* ============================================================ */
-
 @import url("pygments.css");
+
+.foil-notes {
+    display: none;
+}
+
+.foil-body {
+    display: block;
+}
 
 html {
     font-family: Verdana, Tahoma, Arial, sans-serif;
@@ -45,7 +51,6 @@ table tr th {
 .header {
     background-color: #fffc84;
     height: 125px;
-    padding-left: 200px;
     text-align: center;
     background-image: url(../images/xmlss-1024.png);
     background-repeat: no-repeat;
@@ -112,6 +117,10 @@ img {
     height: 0px;
 }
 
+.footer .foilnumber:before {
+  content: " Slide ";
+}
+
 /* ============================================================ */
 
 .titlefoil {
@@ -120,12 +129,43 @@ img {
     background-position: 0 120;
 }
 
+.titlefoil .page {
+    background-image: url(../images/xmlssw-1024.png);
+    background-repeat: no-repeat;
+    background-position: 10 20;
+}
+
+.titlefoil .header {
+    margin-left: 200px;
+    background-color: white;
+    background-image: none;
+}
+
+.titlefoil .mlheader {
+    margin-left: 200px;
+    background-color: white;
+    background-image: url(../images/marklogic-logo.gif);
+    background-repeat: no-repeat;
+    background-position: 470 40;
+}
+
+/*
+.titlefoil {
+    background-image: url(../images/radcliff.png);
+    background-repeat: no-repeat;
+    background-position: 0 120;
+}
+
+.titlefoil .page {
+}
+
 .titlefoil .header {
     background-color: white;
     background-image: url(../images/xmlssw-1024.png);
     background-repeat: no-repeat;
     background-position: 10 20;
 }
+*/
 
 .titlefoil .header h1 {
     padding-top: 20px;
@@ -189,11 +229,32 @@ img {
 
 /* ============================================================ */
 
+.foilinset {
+    border: solid black 1px;
+    padding: 1em;
+    margin-left: 3em;
+    width: 40%;
+    float: right;
+    font-size: 10pt;
+}
+
+/* ============================================================ */
+
+.helpdialog {
+    font-size: 12pt;
+}
+
+/* ============================================================ */
+
 pre {
     font-family: Courier New, Courier, monospaced;
     font-weight: bold;
     border: 1px solid black;
     padding: 10px;
+}
+
+.wide pre {
+        font-size: 0.9em;
 }
 
 .xml {
@@ -211,6 +272,10 @@ pre {
 .other {
     background-color: #C7FFFF;
     color: #9E0000;
+}
+
+.wide {
+    font-size: 0.75em;
 }
 
 .hideli {
@@ -283,6 +348,11 @@ ul.toc a:visited {
     text-decoration: none;
 }
 
+.center {
+    text-align: center;
+}
+
+
 /* ============================================================ */
 
 .clicknav {
@@ -295,6 +365,27 @@ ul.toc a:visited {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+/* ============================================================ */
+
+.timer {
+    position: relative;
+    top: 35;
+    left: 732;
+    height: 0px;
+    width: 40px;
+    font-size: 10px;
+    font-weight: medium;
+}
+
+.overtime {
+    color: red;
+    font-style: normal;
+}
+
+.lowtime {
+    font-style: italic;
 }
 
 /* ============================================================ */
